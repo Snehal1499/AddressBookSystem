@@ -5,7 +5,7 @@ namespace AddressBook
 {
     public class Address
     {
-        public string firstName, firstName2, lastName, lastName2, address, address2, city, city2, state, state2, zip, zip2, phoneNo, phoneNo2, email, email2;
+        public string firstName, firstName2, firstName3, lastName, lastName2, lastName3, address, address2, address3, city, city2, city3, state, state2, state3, zip, zip2, zip3, phoneNo, phoneNo2, phoneNo3, email, email2, email3;
         public int value;
     }
     internal class Program
@@ -20,8 +20,9 @@ namespace AddressBook
             {
                 Console.WriteLine("\nEnter 1 to Add Details");
                 Console.WriteLine("Enter 2 to Add 2nd Person Details");
-                Console.WriteLine("Enter 3 to Edit Existing Detail");
+                Console.WriteLine("Enter 3 to Edit Existing Details");
                 Console.WriteLine("Enter 4 to Delete Existing Detials");
+                Console.WriteLine("Enter 5 to Add 3rd Person Details");
                 a.value = Convert.ToInt32(Console.ReadLine());
                 switch (a.value)
                 {
@@ -195,6 +196,43 @@ namespace AddressBook
                             Console.WriteLine("\n Record Deleted: \n");
 
                         }
+                        break;
+                    case 5:
+
+                        Console.WriteLine("Enter First Name ");
+                        a.firstName3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.firstName3);
+                        Console.WriteLine("Enter Last Name");
+                        a.lastName3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.lastName3);
+                        Console.WriteLine("Enter Address ");
+                        a.address3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.address3);
+                        Console.WriteLine("Enter city");
+                        a.city3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.city3);
+                        Console.WriteLine("Enter state");
+                        a.state3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.state3);
+                        Console.WriteLine("Enter zip");
+                        a.zip3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.zip3);
+                        Console.WriteLine("Enter Phone Number");
+                        a.phoneNo3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.phoneNo3);
+                        Console.WriteLine("Enter Email");
+                        a.email3 = Convert.ToString(Console.ReadLine());
+                        addbook.Add(a.email3);
+
+                        Console.WriteLine("\nGiven Detail Are : \n");
+                        Console.WriteLine("First Name = " + addbook[16]);
+                        Console.WriteLine("Lastt Name = " + addbook[17]);
+                        Console.WriteLine("Address = " + addbook[18]);
+                        Console.WriteLine("City = " + addbook[19]);
+                        Console.WriteLine("State = " + addbook[20]);
+                        Console.WriteLine("Zip = " + addbook[21]);
+                        Console.WriteLine("Phone Number = " + addbook[22]);
+                        Console.WriteLine("Email = " + addbook[23]);
                         break;
                 }
                 choice();
